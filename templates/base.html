@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sentiment Checker{% endblock %}</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f5f7;
+            color: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #1a1a2e;
+            color: white;
+            padding: 20px 40px;
+        }
+
+        header h1 {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        main {
+            flex: 1;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 13px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 14px;
+            font-size: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #4361ee;
+        }
+
+        button {
+            margin-top: 14px;
+            padding: 12px 28px;
+            font-size: 15px;
+            font-weight: 500;
+            background: #4361ee;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #3651d4;
+        }
+
+        button:disabled {
+            background: #aab4f5;
+            cursor: not-allowed;
+        }
+
+        #result {
+            margin-top: 24px;
+            padding: 18px;
+            border-radius: 10px;
+            font-size: 17px;
+            display: none;
+        }
+
+        .ai {
+            background: #fde8e8;
+            color: #9b1c1c;
+            border: 1px solid #f8b4b4;
+        }
+
+        .human {
+            background: #e6f6ec;
+            color: #036b3a;
+            border: 1px solid #9ee6b8;
+        }
+    </style>
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <h1>🔍 Sentiment Checker</h1>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        Зроблено на Flask + scikit-learn
+    </footer>
+
+</body>
+</html>

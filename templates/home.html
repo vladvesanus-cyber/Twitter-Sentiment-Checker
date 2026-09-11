@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2 style="margin-bottom: 16px; font-size: 20px;">Check Text for Sentiment</h2>
+
+    {% if error %}
+        <p style="color: #9b1c1c; margin-bottom: 12px;">{{ error }}</p>
+    {% endif %}
+
+    <form action="/check" method="POST">
+        <textarea name="text" placeholder="Paste text for checking..."></textarea>
+        <br>
+        <button type="submit">Check</button>
+    </form>
+{% endblock %} 

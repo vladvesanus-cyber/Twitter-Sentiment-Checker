@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2 style="margin-bottom: 16px; font-size: 20px;">Check Result</h2>
+
+    <div id="result" class="{{ 'ai' if result == 1 else 'human' }}" style="display: block;">
+        <strong>
+            {% if result == 1 %}
+                This text has a negative sentiment
+            {% else %}
+                This text has a positive sentiment
+            {% endif %}
+        </strong>
+    </div>
+
+    <a href="/" style="display: inline-block; margin-top: 20px; color: #4361ee;">← Check Another Text</a>
+{% endblock %}
