@@ -61,7 +61,7 @@ Twitter/
 The project has no `requirements.txt` — install the packages manually:
 
 ```bash
-pip install flask pandas scikit-learn
+pip install -r requirements.txt
 ```
 
 ### Train the Model
@@ -89,7 +89,6 @@ This starts a Flask server (by default at `http://127.0.0.1:5000`) where you can
 
 ## 💡 Possible Improvements
 
-- Add a `requirements.txt` with pinned dependency versions
 - Support neutral sentiment (currently binary classification: positive/negative)
 - Replace TF-IDF with embeddings (e.g. Word2Vec, BERT) for better accuracy
 - Tune hyperparameters with `GridSearchCV`
